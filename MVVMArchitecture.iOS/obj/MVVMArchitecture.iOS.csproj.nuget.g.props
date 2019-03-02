@@ -3,7 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.iOS/obj/project.assets.json</ProjectAssetsFile>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.iOS/obj/project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/nidhi/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/nidhi/.nuget/packages/</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
@@ -14,5 +14,10 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xamarin.forms/3.5.0.169047/build/Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms/3.5.0.169047/build/Xamarin.Forms.props')" />
+    <Import Project="$(NuGetPackageRoot)text.analyzers/2.6.3/build/Text.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)text.analyzers/2.6.3/build/Text.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netframework.analyzers/2.6.3/build/Microsoft.NetFramework.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netframework.analyzers/2.6.3/build/Microsoft.NetFramework.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netcore.analyzers/2.6.3/build/Microsoft.NetCore.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.analyzers/2.6.3/build/Microsoft.NetCore.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codequality.analyzers/2.6.3/build/Microsoft.CodeQuality.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codequality.analyzers/2.6.3/build/Microsoft.CodeQuality.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.fxcopanalyzers/2.6.3/build/Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.fxcopanalyzers/2.6.3/build/Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
   </ImportGroup>
 </Project>

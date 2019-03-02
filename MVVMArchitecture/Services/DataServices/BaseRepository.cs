@@ -37,7 +37,7 @@ namespace MVVMArchitecture.Services
 
         public BaseRepository()
         {
-            db = Database.DatabaseInstance.sqlConnection;
+            db = Database.DatabaseInstance.SqlConnection;
         }
 
         public AsyncTableQuery<T> AsQueryable() =>
@@ -76,7 +76,7 @@ namespace MVVMArchitecture.Services
         /// <param name="pk">primary key</param>
         /// <returns>record found</returns>
         public async Task<T> Get(object pk) =>
-             await db.FindAsync<T>(pk);
+             await db.FindAsync<T>(pk).ConfigureAwait(false);
 
         /// <summary>
         /// Get a record based on the predicate
@@ -84,7 +84,7 @@ namespace MVVMArchitecture.Services
         /// <param name="predicate">predicate which defines the criteria for search</param>
         /// <returns>record found</returns>
         public async Task<T> Get(Expression<Func<T, bool>> predicate) =>
-            await db.FindAsync<T>(predicate);
+            await db.FindAsync<T>(predicate).ConfigureAwait(false);
 
         /// <summary>
         /// Inserts a record
@@ -92,7 +92,7 @@ namespace MVVMArchitecture.Services
         /// <param name="entity"> entity </param>
         /// <returns> int value</returns>
         public async Task<int> Insert(T entity) =>
-             await db.InsertAsync(entity);
+             await db.InsertAsync(entity).ConfigureAwait(false);
 
         /// <summary>
         /// Update an existing record in the table
@@ -100,7 +100,7 @@ namespace MVVMArchitecture.Services
         /// <param name="entity"> entity </param>
         /// <returns> int value</returns>
         public async Task<int> Update(T entity) =>
-             await db.UpdateAsync(entity);
+             await db.UpdateAsync(entity).ConfigureAwait(false);
 
         /// <summary>
         /// Delete a record from table
@@ -108,7 +108,7 @@ namespace MVVMArchitecture.Services
         /// <param name="entity"> entity </param>
         /// <returns> int value</returns>
         public async Task<int> Delete(T entity) =>
-             await db.DeleteAsync(entity);
+             await db.DeleteAsync(entity).ConfigureAwait(false);
 
         /// <summary>
         /// Deletes all records from the table
@@ -116,12 +116,12 @@ namespace MVVMArchitecture.Services
         /// <returns></returns>
         public async Task DeleteAllFromTable()
         {
-            await db.ExecuteScalarAsync<T>("DELETE FROM " + typeof(T).Name);
+            await db.ExecuteScalarAsync<T>("DELETE FROM " + typeof(T).Name).ConfigureAwait(false);
         }
 
         public async Task InsertAll(IEnumerable<T> entities)
         {
-            await db.InsertAllAsync(entities); // default run in transaction
+            await db.InsertAllAsync(entities).ConfigureAwait(false); // default run in transaction
         }
 
     }

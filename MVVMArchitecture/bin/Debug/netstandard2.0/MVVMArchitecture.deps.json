@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "fa77ec23ca69b4b8a1662d2b8f25382a982cb219"
+    "signature": "5c04ef6a351f5eac6c8963ba96b681b89b53bfc1"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,6 +11,8 @@
         "dependencies": {
           "CommonServiceLocator": "2.0.4",
           "FluentValidation": "8.1.3",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.3",
+          "Microsoft.CodeQuality.Analyzers": "2.6.3",
           "MvvmLight": "5.4.1.1",
           "MvvmLightLibs": "5.4.1.1",
           "NETStandard.Library": "2.0.3",
@@ -44,7 +46,18 @@
         }
       },
       "Microsoft.Build.Tasks.Git/1.0.0-beta2-18618-05": {},
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+        "dependencies": {
+          "Microsoft.CodeQuality.Analyzers": "2.6.3",
+          "Microsoft.NetCore.Analyzers": "2.6.3",
+          "Microsoft.NetFramework.Analyzers": "2.6.3",
+          "Text.Analyzers": "2.6.3"
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.6.3": {},
+      "Microsoft.NetCore.Analyzers/2.6.3": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NetFramework.Analyzers/2.6.3": {},
       "Microsoft.SourceLink.Common/1.0.0-beta2-18618-05": {},
       "Microsoft.SourceLink.GitHub/1.0.0-beta2-18618-05": {
         "dependencies": {
@@ -147,6 +160,7 @@
           }
         }
       },
+      "Text.Analyzers/2.6.3": {},
       "Xam.Plugin.Connectivity/4.0.0.190-beta": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
@@ -207,12 +221,40 @@
       "path": "microsoft.build.tasks.git/1.0.0-beta2-18618-05",
       "hashPath": "microsoft.build.tasks.git.1.0.0-beta2-18618-05.nupkg.sha512"
     },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e8tBG/lWlpA55jyyw/ceB4RJY/Fbtw/xY9GhYTRe01HsU4u8ECIGWhwLj/k89W2ZPrm/P4lUG+VcEwERSY/ugA==",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.6.3",
+      "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.6.3.nupkg.sha512"
+    },
+    "Microsoft.CodeQuality.Analyzers/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ns86d09X8PekFxDI9TUQs1diW9EPFbnnZEAieMEe2en0a61cdNH6NI9BvxJtwX2I9+okBWzr7vInknMzy3IK/A==",
+      "path": "microsoft.codequality.analyzers/2.6.3",
+      "hashPath": "microsoft.codequality.analyzers.2.6.3.nupkg.sha512"
+    },
+    "Microsoft.NetCore.Analyzers/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jHd3oP9DnksKS/szAW1uQV8WN05rju0AE2KiqCC5YHQkmxZueM6MDtvxofdXZPGIJ7DpHUE0Ghxrjw7R4dNtVQ==",
+      "path": "microsoft.netcore.analyzers/2.6.3",
+      "hashPath": "microsoft.netcore.analyzers.2.6.3.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NetFramework.Analyzers/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L6BC3smztIblEHIJsAm+gsEPpW0JQqWH87qNMM5L6I/g01fnG6eIzwjJo03GWzQdCfLuh9v0I63z9vHmAcXIUA==",
+      "path": "microsoft.netframework.analyzers/2.6.3",
+      "hashPath": "microsoft.netframework.analyzers.2.6.3.nupkg.sha512"
     },
     "Microsoft.SourceLink.Common/1.0.0-beta2-18618-05": {
       "type": "package",
@@ -290,6 +332,13 @@
       "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
       "path": "system.componentmodel.annotations/4.4.1",
       "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
+    },
+    "Text.Analyzers/2.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gp9JttEK9yunfBtW9/LPJuEL3JMQvVtAEGKg/n5cU7ihq5IB53vcKRVgRbG6tLOETn5uk/N8886kHRx1Rnp4lw==",
+      "path": "text.analyzers/2.6.3",
+      "hashPath": "text.analyzers.2.6.3.nupkg.sha512"
     },
     "Xam.Plugin.Connectivity/4.0.0.190-beta": {
       "type": "package",

@@ -136,7 +136,7 @@ namespace MVVMArchitecture.Services.ViewServices
         public Task ShowMessageBox(string message, string title)
         {
             ///TODO custom method calls or other stuff to hanlde
-            PrintLog(message, title);
+            PrintLog(this, message, title);
             return null;
         }
         #endregion
@@ -146,7 +146,7 @@ namespace MVVMArchitecture.Services.ViewServices
         /// </summary>
         /// <param name="message">Message.</param>
         /// <param name="title">Title.</param>
-        public void PrintLog(string message, string title)
+        public static void PrintLog(DialogService instance, string message, string title)
         {
             ///TODO 
             ///Comment this line for release or live mode for removing all occurences of debugging logs as they make the app slow.
@@ -158,8 +158,7 @@ namespace MVVMArchitecture.Services.ViewServices
         /// </summary>
         public void HideActivityIndicatorIfAny()
         {
-            var pageController = pageRef as IPageController;
-            if (pageController != null)
+            if (pageRef is IPageController pageController)
             {
                 var vm = (BaseViewModel)((NavigationPage)pageController).CurrentPage.BindingContext;
                 vm.IsBusy = false;

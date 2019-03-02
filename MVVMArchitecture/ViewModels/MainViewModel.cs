@@ -30,8 +30,8 @@ namespace MVVMArchitecture.ViewModels
             get => clickCount;
             set
             {
-                SetProperty(ref clickCount, value, "ClickCount");
-                OnPropertyChanged("ClickCountFormatted");
+                SetProperty(ref clickCount, value, nameof(ClickCount));
+                OnPropertyChanged(nameof(ClickCountFormatted));
             }
         }
 

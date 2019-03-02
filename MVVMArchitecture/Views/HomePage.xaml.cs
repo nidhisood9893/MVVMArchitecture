@@ -15,7 +15,7 @@ namespace MVVMArchitecture.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            App.Locator?.HomeViewModel?.ShowDialog();
+            // App.Locator?.HomeViewModel?.ShowDialog();
         }
     }
 }

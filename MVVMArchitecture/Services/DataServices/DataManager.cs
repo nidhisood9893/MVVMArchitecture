@@ -9,7 +9,6 @@ namespace MVVMArchitecture.Services.DataServices
     public class DataManager : IRestService
     {
         #region Fields
-        static readonly object dbLock = new object();
         static readonly object instanceLock = new object();
         static DataManager instance;
         Database db;
@@ -88,7 +87,7 @@ namespace MVVMArchitecture.Services.DataServices
             }
             catch (Exception ex)
             {
-                DialogService?.ShowError(ex, AuthenticationAlerts.SignUpFailed, CommonStrings.Ok, null);
+                await DialogService?.ShowError(ex, AuthenticationAlerts.SignUpFailed, CommonStrings.Ok, null);
             }
 
             return id > 0;

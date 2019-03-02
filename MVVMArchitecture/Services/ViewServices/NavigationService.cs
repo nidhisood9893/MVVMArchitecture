@@ -85,9 +85,7 @@ namespace MVVMArchitecture.Services.ViewServices
                             .DeclaredConstructors
                             .FirstOrDefault(c => !c.GetParameters().Any());
 
-                        parameters = new object[]
-                        {
-                        };
+                        parameters = Array.Empty<object>();
                     }
                     else
                     {

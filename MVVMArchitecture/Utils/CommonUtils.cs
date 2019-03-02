@@ -36,7 +36,7 @@ namespace MVVMArchitecture.Utils
         /// </summary>
         /// <param name="message">Message.</param>
         /// <param name="title">Title.</param>
-        public void PrintLog(string message, string title)
+        public static void PrintLog(string message, string title)
         {
             ///TODO 
             ///Comment this line for release or live mode for removing all occurences of debugging logs as they make the app slow.

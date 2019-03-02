@@ -127,11 +127,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.UITests/MVVMArchitecture.UITests.csproj",
+      "projectUniqueName": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/MVVMArchitecture.UITests.csproj",
       "projectName": "MVVMArchitecture.UITests",
-      "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.UITests/MVVMArchitecture.UITests.csproj",
+      "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/MVVMArchitecture.UITests.csproj",
       "packagesPath": "/Users/nidhi/.nuget/packages/",
-      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.UITests/obj",
+      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nidhi/.config/NuGet/NuGet.Config"

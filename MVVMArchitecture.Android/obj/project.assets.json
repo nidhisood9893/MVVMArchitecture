@@ -32,6 +32,36 @@
           "buildCrossTargeting/_._": {}
         }
       },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeQuality.Analyzers": "[2.6.3]",
+          "Microsoft.NetCore.Analyzers": "[2.6.3]",
+          "Microsoft.NetFramework.Analyzers": "[2.6.3]",
+          "Text.Analyzers": "[2.6.3]"
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.NetFramework.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.SourceLink.Common/1.0.0-beta2-18618-05": {
         "type": "package",
         "build": {
@@ -162,6 +192,12 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "Text.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
         }
       },
       "Xam.Plugin.Connectivity/4.0.0.190-beta": {
@@ -520,6 +556,8 @@
         "dependencies": {
           "CommonServiceLocator": "2.0.4",
           "FluentValidation": "8.1.3",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.3",
+          "Microsoft.CodeQuality.Analyzers": "2.6.3",
           "MvvmLight": "5.4.1.1",
           "MvvmLightLibs": "5.4.1.1",
           "Refractored.MvvmHelpers": "1.3.0",
@@ -634,6 +672,155 @@
         "tools/netcoreapp2.0/tr/Microsoft.Build.Tasks.Git.resources.dll",
         "tools/netcoreapp2.0/zh-Hans/Microsoft.Build.Tasks.Git.resources.dll",
         "tools/netcoreapp2.0/zh-Hant/Microsoft.Build.Tasks.Git.resources.dll"
+      ]
+    },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+      "sha512": "e8tBG/lWlpA55jyyw/ceB4RJY/Fbtw/xY9GhYTRe01HsU4u8ECIGWhwLj/k89W2ZPrm/P4lUG+VcEwERSY/ugA==",
+      "type": "package",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.6.3",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props",
+        "microsoft.codeanalysis.fxcopanalyzers.2.6.3.nupkg.sha512",
+        "microsoft.codeanalysis.fxcopanalyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "rulesets/legacy/AllRules.ruleset",
+        "rulesets/legacy/BasicCorrectnessRules.ruleset",
+        "rulesets/legacy/BasicDesignGuidelineRules.ruleset",
+        "rulesets/legacy/ExtendedCorrectnessRules.ruleset",
+        "rulesets/legacy/ExtendedDesignGuidelineRules.ruleset",
+        "rulesets/legacy/GlobalizationRules.ruleset",
+        "rulesets/legacy/ManagedMinimumRules.ruleset",
+        "rulesets/legacy/MinimumRecommendedRules.ruleset",
+        "rulesets/legacy/Sdl-7.1.Recommended.ruleset",
+        "rulesets/legacy/Sdl-7.1.Required.ruleset",
+        "rulesets/legacy/SecurityRules.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.CodeQuality.Analyzers/2.6.3": {
+      "sha512": "Ns86d09X8PekFxDI9TUQs1diW9EPFbnnZEAieMEe2en0a61cdNH6NI9BvxJtwX2I9+okBWzr7vInknMzy3IK/A==",
+      "type": "package",
+      "path": "microsoft.codequality.analyzers/2.6.3",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Humanizer.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Humanizer.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.VisualBasic.Analyzers.dll",
+        "build/Microsoft.CodeQuality.Analyzers.props",
+        "microsoft.codequality.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.codequality.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.NetCore.Analyzers/2.6.3": {
+      "sha512": "jHd3oP9DnksKS/szAW1uQV8WN05rju0AE2KiqCC5YHQkmxZueM6MDtvxofdXZPGIJ7DpHUE0Ghxrjw7R4dNtVQ==",
+      "type": "package",
+      "path": "microsoft.netcore.analyzers/2.6.3",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetCore.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.VisualBasic.Analyzers.dll",
+        "build/Microsoft.NetCore.Analyzers.props",
+        "microsoft.netcore.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.netcore.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.NetFramework.Analyzers/2.6.3": {
+      "sha512": "L6BC3smztIblEHIJsAm+gsEPpW0JQqWH87qNMM5L6I/g01fnG6eIzwjJo03GWzQdCfLuh9v0I63z9vHmAcXIUA==",
+      "type": "package",
+      "path": "microsoft.netframework.analyzers/2.6.3",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.VisualBasic.Analyzers.dll",
+        "build/Microsoft.NetFramework.Analyzers.props",
+        "microsoft.netframework.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.netframework.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.SourceLink.Common/1.0.0-beta2-18618-05": {
@@ -1063,6 +1250,27 @@
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Text.Analyzers/2.6.3": {
+      "sha512": "gp9JttEK9yunfBtW9/LPJuEL3JMQvVtAEGKg/n5cU7ihq5IB53vcKRVgRbG6tLOETn5uk/N8886kHRx1Rnp4lw==",
+      "type": "package",
+      "path": "text.analyzers/2.6.3",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Text.Analyzers.dll",
+        "analyzers/dotnet/cs/Text.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Text.Analyzers.dll",
+        "analyzers/dotnet/vb/Text.VisualBasic.Analyzers.dll",
+        "build/Text.Analyzers.props",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "text.analyzers.2.6.3.nupkg.sha512",
+        "text.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Xam.Plugin.Connectivity/4.0.0.190-beta": {
@@ -1722,11 +1930,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.Android/MVVMArchitecture.Android.csproj",
+      "projectUniqueName": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/MVVMArchitecture.Android.csproj",
       "projectName": "MVVMArchitecture.Android",
-      "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.Android/MVVMArchitecture.Android.csproj",
+      "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/MVVMArchitecture.Android.csproj",
       "packagesPath": "/Users/nidhi/.nuget/packages/",
-      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture.Android/obj",
+      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nidhi/.config/NuGet/NuGet.Config"
@@ -1740,8 +1948,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/MVVMArchitecture.csproj": {
-              "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/MVVMArchitecture.csproj"
+            "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture/MVVMArchitecture.csproj": {
+              "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture/MVVMArchitecture.csproj"
             }
           }
         }
