@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using FluentValidation;
 using FluentValidation.Internal;
-using GalaSoft.MvvmLight.Views;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Views;
 using MVVMArchitecture.Models.DatabaseEntities;
 using MVVMArchitecture.Services.DataServices;
 using MVVMArchitecture.Services.RestServices;
@@ -18,8 +18,8 @@ namespace MVVMArchitecture.ViewModels
         /// <summary>
         /// Initializes a new instance of the <see cref="T:MVVMArchitecture.ViewModels.LoginViewModel"/> class.
         /// </summary>
-        /// <param name="navigation">Navigation.</param>
-        /// <param name="dialog">Dialog.</param>
+        /// <param name="navigation"> Navigation </param>
+        /// <param name="dialog"> Dialog</param>
         public LoginViewModel(INavigationService navigation, IDialogService dialog) : base(navigation, dialog)
         {
             Title = PageTitles.LoginTitle;
@@ -80,6 +80,7 @@ namespace MVVMArchitecture.ViewModels
                 IsBusy = false;
                 await DialogService.ShowMessage(validationResults.Errors[0].ErrorMessage, AuthenticationAlerts.LoginFailed);
             }
+
             IsBusy = false;
             LoginCommand.RaiseCanExecuteChanged();
         }

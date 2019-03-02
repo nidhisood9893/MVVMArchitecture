@@ -154,6 +154,7 @@ namespace MVVMArchitecture.Services.ViewServices
                         var exceptionMessage = $"No suitable constructor found for page {pageKey}";
                         throw new InvalidOperationException(exceptionMessage);
                     }
+
                     if (!replaceRoot)
                     {
                         var page = constructor.Invoke(parameters) as Page;
@@ -198,6 +199,7 @@ namespace MVVMArchitecture.Services.ViewServices
                                    && p[parameterCount - 1].ParameterType == parameters[parameterCount - 1].GetType();
                         });
             }
+
             return constructor;
         }
 

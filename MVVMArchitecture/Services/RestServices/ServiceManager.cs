@@ -6,8 +6,8 @@ namespace MVVMArchitecture.Services.RestServices
 {
     public class ServiceManager
     {
-        static ServiceManager instance;
         static readonly object serviceInstance = new object();
+        static ServiceManager instance;
         RestService restService;
 
         #region Properties

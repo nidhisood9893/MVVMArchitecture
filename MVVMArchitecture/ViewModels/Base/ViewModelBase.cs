@@ -19,8 +19,8 @@ namespace MVVMArchitecture.ViewModels
         /// <summary>
         /// Initializes a new instance of the <see cref="T:MVVMArchitecture.ViewModels.ViewModelBase"/> class.
         /// </summary>
-        /// <param name="navigation">Navigation. </param>
-        /// <param name="dialog">Dialog. </param>
+        /// <param name="navigation"> Navigation </param>
+        /// <param name="dialog"> Dialog </param>
         public ViewModelBase(INavigationService navigation, IDialogService dialog)
         {
             NavigationService = navigation;

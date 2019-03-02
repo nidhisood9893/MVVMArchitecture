@@ -7,7 +7,7 @@ namespace MVVMArchitecture.Validations
 {
     public class UserValidator : AbstractValidator<User>
     {
-        const string phoneString = "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$";
+        const string PhoneString = "^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}$";
 
         public UserValidator()
         {
@@ -25,7 +25,7 @@ namespace MVVMArchitecture.Validations
                     arg2.AddFailure(errorMessage: AuthenticationAlerts.EmailAlreadyExists);
             });
 
-            RuleFor(x => x.PhoneNumber).NotNull().WithMessage(AuthenticationAlerts.PropertyNameNull).MinimumLength(10).Matches(phoneString);
+            RuleFor(x => x.PhoneNumber).NotNull().WithMessage(AuthenticationAlerts.PropertyNameNull).MinimumLength(10).Matches(PhoneString);
 
             RuleFor(x => x.Email).NotNull().WithMessage(AuthenticationAlerts.PropertyNameNull).EmailAddress().WithMessage("Invalid Email.");
 

@@ -6,9 +6,9 @@ namespace MVVMArchitecture.ViewModels
 {
     public class ViewModelLocator
     {
-        /// <summary>
-        /// Initializes the static member of <see cref="T:MVVMArchitecture.ViewModels.ViewModelLocator"/> class.
-        /// </summary>
+        ///<summary>
+        ///Initializes the static member of <see cref="T:MVVMArchitecture.ViewModels.ViewModelLocator"/> class.
+        ///</summary>
         static ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);

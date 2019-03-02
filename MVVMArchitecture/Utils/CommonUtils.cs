@@ -34,8 +34,8 @@ namespace MVVMArchitecture.Utils
         /// <summary>
         /// Prints the custom debugging logs.
         /// </summary>
-        /// <param name="message">Message.</param>
-        /// <param name="title">Title.</param>
+        /// <param name="message"> Message</param>
+        /// <param name="title"> Title</param>
         public static void PrintLog(string message, string title)
         {
             ///TODO 

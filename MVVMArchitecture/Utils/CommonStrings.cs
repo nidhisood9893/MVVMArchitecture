@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MVVMArchitecture.Utils
+﻿namespace MVVMArchitecture.Utils
 {
     public struct CommonStrings
     {
@@ -18,7 +16,7 @@ namespace MVVMArchitecture.Utils
 
     public struct PlaceHolders
     {
-        ///login
+        //login
         public static string Username = "Username";
         public static string Password = "Password";
         public static string Phone = "Phone Number";
@@ -28,7 +26,7 @@ namespace MVVMArchitecture.Utils
 
     public struct AuthenticationAlerts
     {
-        ///login
+        //login
         public static string LoginFailed = "Login failed!";
         public static string LoginSuccess = "Login successfull!";
         public static string PropertyNameNull = "Please enter {PropertyName}";
@@ -36,7 +34,7 @@ namespace MVVMArchitecture.Utils
         public static string SignUpSuccess = "Sign up successfull!";
         public static string PasswordMismatch = "Password & confirm password do not match";
 
-        ///signup errors
+        //signup errors
         public static string UserAlreadyExists = "Username already exists!";
         public static string EmailAlreadyExists = "Email already exists!";
         public static string InvalidCredentials = "Invalid Credentials";

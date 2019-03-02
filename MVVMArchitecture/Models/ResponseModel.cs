@@ -11,8 +11,8 @@
 
         [System.ComponentModel.DisplayName("Message")]
         public string Message { get; set; }
-
     }
+
     public class LoginResponse
     {
         [System.ComponentModel.DisplayName("result")]

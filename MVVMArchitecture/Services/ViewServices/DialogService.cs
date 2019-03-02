@@ -15,7 +15,7 @@ namespace MVVMArchitecture.Services.ViewServices
         /// <summary>
         /// Initialize the specified page.
         /// </summary>
-        /// <param name="page">Page </param>
+        /// <param name="page"> Page </param>
         public void Initialize(Page page)
         {
             pageRef = page;
@@ -74,8 +74,8 @@ namespace MVVMArchitecture.Services.ViewServices
         /// Shows the message.
         /// </summary>
         /// <returns>The message.</returns>
-        /// <param name="message">Message. </param>
-        /// <param name="title">Title. </param>
+        /// <param name="message"> Message. </param>
+        /// <param name="title"> Title. </param>
         public async Task ShowMessage(string message, string title)
         {
             pageRef.IsBusy = false;
@@ -90,8 +90,8 @@ namespace MVVMArchitecture.Services.ViewServices
         /// Shows the message.
         /// </summary>
         /// <returns>The message.</returns>
-        /// <param name="message">Message.</param>
-        /// <param name="title">Title.</param>
+        /// <param name="message"> Message. </param>
+        /// <param name="title"> Title. </param>
         /// <param name="buttonText">Button text.</param>
         /// <param name="afterHideCallback">After hide callback.</param>
         public async Task ShowMessage(string message, string title, string buttonText, Action afterHideCallback)
@@ -148,8 +148,8 @@ namespace MVVMArchitecture.Services.ViewServices
         /// <param name="title">Title.</param>
         public static void PrintLog(DialogService instance, string message, string title)
         {
-            ///TODO 
-            ///Comment this line for release or live mode for removing all occurences of debugging logs as they make the app slow.
+            //TODO 
+            //Comment this line for release or live mode for removing all occurences of debugging logs as they make the app slow.
             Console.WriteLine(title + " -> " + message);
         }
 
@@ -168,9 +168,6 @@ namespace MVVMArchitecture.Services.ViewServices
                     foreach (var child in ((NavigationPage)pageController).CurrentPage.InternalChildren)
                     {
                         var result = child.FindByName("grid");
-
-                        //if (result != null && result is Grid)
-                        //(result as Grid).IsVisible = false;
                     }
                 }
             }
