@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     x:Class="MVVMArchitecture.App"
+     xmlns:vm="clr-namespace:MVVMArchitecture.ViewModels">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--viewmodel locator-->
+            <vm:ViewModelLocator x:Key="Locator" />
+            <ControlTemplate x:Key="PageTemplate">
+                <Grid>
+                    <ContentPresenter />
+                    <Grid x:Name="grid"
+                         IsVisible="{Binding Source={x:Reference activityIndicator},Path=IsRunning}">
+                        <Frame Opacity="0.8" HeightRequest="80"
+                             WidthRequest="90" Padding="10" TranslationY="-20"
+                             HorizontalOptions="Center" VerticalOptions="Center"
+                             HasShadow="true" CornerRadius="8"
+                             BackgroundColor="Black">
+                            <ActivityIndicator x:Name="activityIndicator"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 IsRunning="{TemplateBinding BindingContext.IsBusy}"
+                                 IsVisible="{TemplateBinding BindingContext.IsBusy}"
+                                 Color="White">
+                                <ActivityIndicator.Scale>
+                                    <OnPlatform x:TypeArguments="x:Double"
+                                         iOS="2.0" Android="1.2" />
+                                </ActivityIndicator.Scale>
+                            </ActivityIndicator>
+                        </Frame>
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+            <!--Colors-->
+            <Color x:Key="AppThemeColor">Teal</Color>
+            <!-- global styles-->
+          
+            <!--layout styles-->
+            <Style x:Key="ScrollViewStyle" TargetType="ScrollView">
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" /> 
+            </Style>
+            <Style x:Key="StacklayoutStyle" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Margin" Value="20" />
+                <Setter Property="Spacing" Value="20" />
+            </Style>
+           
+            <!--button style-->
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="BackgroundColor"
+                     Value="{StaticResource AppThemeColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="20" />
+            </Style>
+            
+            <!--entry style-->
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor" Value="Gray" />
+            </Style>
+            
+            <!--label style-->
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor"
+                     Value="{StaticResource AppThemeColor}" />
+                <Setter Property="Font" Value="24" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

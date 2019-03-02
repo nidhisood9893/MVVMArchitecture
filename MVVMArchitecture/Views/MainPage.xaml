@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:local="clr-namespace:MVVMArchitecture"
+     xmlns:utils="clr-namespace:MVVMArchitecture.Utils"
+     x:Class="MVVMArchitecture.MainPage"
+     BindingContext="{Binding  Source={StaticResource Locator},
+    Path=MainViewModel}"
+     Title="{Binding Title}">
+    <!--    BindingContext="{Binding Source={x:Static local:App.Locator}, Path=MainViewModel}"-->
+    <StackLayout Style="{StaticResource StacklayoutStyle}">
+        <!-- Place new controls here -->
+        <Button Style="{StaticResource ButtonStyle}"
+             Text="{Binding Source={x:Static utils:PageTitles.MainPageTitle}}"
+             Command="{Binding RelayCommand}" />
+    </StackLayout>
+</ContentPage>

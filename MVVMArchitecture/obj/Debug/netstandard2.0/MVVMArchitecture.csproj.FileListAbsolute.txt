@@ -1,0 +1,14 @@
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/bin/Debug/netstandard2.0/MVVMArchitecture.deps.json
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/bin/Debug/netstandard2.0/MVVMArchitecture.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/bin/Debug/netstandard2.0/MVVMArchitecture.pdb
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/Views/HomePage.xaml.g.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/Views/LoginPage.xaml.g.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/Views/SignUpPage.xaml.g.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/MVVMArchitecture.csproj.CoreCompileInputs.cache
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/MVVMArchitecture.AssemblyInfoInputs.cache
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/MVVMArchitecture.AssemblyInfo.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/MVVMArchitecture.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVMArchitecture/MVVMArchitecture/obj/Debug/netstandard2.0/MVVMArchitecture.pdb

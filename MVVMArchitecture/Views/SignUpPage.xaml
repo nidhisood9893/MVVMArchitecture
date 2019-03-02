@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     x:Class="MVVMArchitecture.Views.SignUpPage"
+     xmlns:utils="clr-namespace:MVVMArchitecture.Utils"
+     BindingContext="{Binding Source={StaticResource Locator},Path=SignUpViewModel}"
+     ControlTemplate="{StaticResource PageTemplate}" Title="{Binding Title}">
+    <ContentPage.Content>
+        <ScrollView Style="{StaticResource ScrollViewStyle}"
+             VerticalScrollBarVisibility="Always">
+            <StackLayout Style="{StaticResource StacklayoutStyle}" Spacing="50">
+                <Label Text="{Binding Source={x:Static utils:PageTitles.SignupTitle}}"
+                     TextColor="{StaticResource AppThemeColor}"
+                     HorizontalOptions="CenterAndExpand" FontSize="30" />
+                <StackLayout Style="{StaticResource StacklayoutStyle}">
+                    <Entry Placeholder="{Binding Source={x:Static utils:PlaceHolders.Username}}"
+                         Text="{Binding User.UserName}"
+                         Style="{StaticResource EntryStyle}" />
+                    <Entry Placeholder="{Binding Source={x:Static utils:PlaceHolders.Phone}}"
+                         Text="{Binding User.PhoneNumber}"
+                         Style="{StaticResource EntryStyle}"
+                         Keyboard="Telephone" />
+                    <Entry Placeholder="{Binding Source={x:Static utils:PlaceHolders.Email}}"
+                         Text="{Binding User.Email}" Keyboard="Email"
+                         Style="{StaticResource EntryStyle}" />
+                    <Entry Placeholder="{Binding Source={x:Static utils:PlaceHolders.Password}}"
+                         IsPassword="true" Text="{Binding User.Password}"
+                         Style="{StaticResource EntryStyle}" />
+                    <Entry Placeholder="{Binding Source={x:Static utils:PlaceHolders.ConfirmPassword}}"
+                         IsPassword="true" Text="{Binding User.ConfirmPassword}"
+                         Style="{StaticResource EntryStyle}" />
+                    <Button Text="{Binding Source={x:Static utils:PageTitles.SignupTitle}}"
+                         Style="{StaticResource ButtonStyle}"
+                         Command="{Binding RegisterCommand}" />
+                    <Button Text="Skip" TextColor="Red"
+                         BackgroundColor="Transparent" TranslationY="-10"
+                         Command="{Binding SkipCommand}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
