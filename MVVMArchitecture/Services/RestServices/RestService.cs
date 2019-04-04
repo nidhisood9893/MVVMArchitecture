@@ -11,22 +11,24 @@ namespace MVVMArchitecture.Services.RestServices
 {
     public class RestService : IRestService
     {
-        readonly IRestServiceError serviceError;
+        IRestServiceError serviceError;
         RestServiceHandler serviceHandler;
         ///GetRestServiceHandler getServiceHandler;
         JsonObject jsonObject;
         RestResponse<ResponseModel> restResponse;
         ResponseModel responseModel;
 
-        public RestService(IRestServiceError error)
+        public RestService()
         {
-            serviceError = error;
+            // serviceError = ServiceLocator.Current.GetInstance<IRestServiceError>(); //error;
+            //   if (serviceError == null && App.Locator?.RestServiceError != null)
         }
 
         #region Authentication
 
         public async Task<bool> LoginUser(User loginUser)
         {
+            serviceError = App.Locator?.RestServiceError;
             bool loginSuccess = false;
             jsonObject = new JsonObject
             {

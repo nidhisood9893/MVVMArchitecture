@@ -1,16 +1,18 @@
-﻿using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using FluentValidation;
 using FluentValidation.Internal;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using MVVMArchitecture.Models.DatabaseEntities;
 using MVVMArchitecture.Services.DataServices;
-using MVVMArchitecture.Services.RestServices;
 using MVVMArchitecture.Utils;
 using MVVMArchitecture.Validations;
 using MVVMArchitecture.Views;
 using Xamarin.Forms;
+using MVVMArchitecture.Services.Helpers;
 
+[assembly: InternalsVisibleTo("MVVMArchitecture.Tests")]
 namespace MVVMArchitecture.ViewModels
 {
     public class LoginViewModel : ViewModelBase
@@ -20,7 +22,7 @@ namespace MVVMArchitecture.ViewModels
         /// </summary>
         /// <param name="navigation"> Navigation </param>
         /// <param name="dialog"> Dialog</param>
-        public LoginViewModel(INavigationService navigation, IDialogService dialog) : base(navigation, dialog)
+        public LoginViewModel(INavigationService navigation, IDialogService dialog, IRestService service) : base(navigation, dialog, service)
         {
             Title = PageTitles.LoginTitle;
             Validator = new UserValidator();
@@ -33,20 +35,28 @@ namespace MVVMArchitecture.ViewModels
         public User User
         {
             get => user;
-            set { SetProperty(ref user, value); }
+            set
+            {
+                SetProperty(ref user, value);
+                ValidationContext = new ValidationContext<User>(User, new PropertyChain(), new RulesetValidatorSelector(new[] { "Login", "Password" }));
+            }
         }
 
         RelayCommand loginCommand;
 
         public RelayCommand LoginCommand
         {
-            get => loginCommand ?? (loginCommand = new RelayCommand(LoginUser, () => !IsBusy));
+            get => loginCommand ?? (loginCommand = new RelayCommand(async () =>
+            {
+                await LoginUser();
+            }, () => !IsBusy));
         }
 
         #endregion
 
         #region Action Hanlders
-        async void LoginUser()
+
+        async Task LoginUser()
         {
             if (IsBusy)
                 return;
@@ -56,10 +66,10 @@ namespace MVVMArchitecture.ViewModels
             var validationResults = Validator.Validate(ValidationContext);
             if (validationResults.IsValid)
             {
-                var loggedIn = await LoginFlow();
-                if (loggedIn)
+                var loggedIn = await LoginFlow().ConfigureAwait(false);
+                Device.BeginInvokeOnMainThread(async () =>
                 {
-                    Device.BeginInvokeOnMainThread(() =>
+                    if (loggedIn)
                     {
                         var navPage = new NavigationPage(new HomePage())
                         {
@@ -67,31 +77,40 @@ namespace MVVMArchitecture.ViewModels
                             BarTextColor = Color.White
                         };
                         App.ConfigureMainPage(navPage);
-                    });
-                }
-                else
-                {
-                    IsBusy = false;
-                    await DialogService.ShowMessage(AuthenticationAlerts.InvalidCredentials, AuthenticationAlerts.LoginFailed);
-                }
+
+                    }
+                    else
+                    {
+                        IsBusy = false;
+                        await DialogService.ShowMessage(AuthenticationAlerts.InvalidCredentials, AuthenticationAlerts.LoginFailed).ConfigureAwait(false);
+                    }
+                });
             }
             else
             {
-                IsBusy = false;
-                await DialogService.ShowMessage(validationResults.Errors[0].ErrorMessage, AuthenticationAlerts.LoginFailed);
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    IsBusy = false;
+                    await DialogService.ShowMessage(validationResults.Errors[0].ErrorMessage, AuthenticationAlerts.LoginFailed).ConfigureAwait(false);
+                });
             }
 
-            IsBusy = false;
-            LoginCommand.RaiseCanExecuteChanged();
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                IsBusy = false;
+                LoginCommand.RaiseCanExecuteChanged();
+            });
         }
 
         /// <summary>
         /// Login flow to login user based on internet and service mode.
         /// </summary>
         /// <returns>The flow.</returns>
-        async Task<bool> LoginFlow()
+        internal async Task<bool> LoginFlow()
         {
-            return await Task.Run(async () => CommonUtils.Instance.IsConnected ? await ServiceManager.Instance.LoginUser(User) : await DataManager.Instance.LoginUser(User));
+            return await Task.Run(async () => CommonUtils.Instance.IsConnected ?
+                await RestService.LoginUser(User).ConfigureAwait(false) :
+                await DataManager.Instance.LoginUser(User).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
         #endregion

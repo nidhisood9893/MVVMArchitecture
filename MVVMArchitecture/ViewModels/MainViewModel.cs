@@ -2,10 +2,11 @@
 using GalaSoft.MvvmLight.Views;
 using MvvmHelpers;
 using MVVMArchitecture.Utils;
+using System;
 
 namespace MVVMArchitecture.ViewModels
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel, IDisposable
     {
         readonly INavigationService navigationService;
         readonly IDialogService dialogService;
@@ -72,5 +73,10 @@ namespace MVVMArchitecture.ViewModels
             }
         }
         #endregion
+
+        public void Dispose()
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@
           "lib/nunit.framework.dll": {}
         }
       },
-      "Xamarin.UITest/2.2.4": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -31,7 +31,7 @@
           "lib/nunit.framework.dll": {}
         }
       },
-      "Xamarin.UITest/2.2.4": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -51,7 +51,7 @@
           "lib/nunit.framework.dll": {}
         }
       },
-      "Xamarin.UITest/2.2.4": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -71,7 +71,7 @@
           "lib/nunit.framework.dll": {}
         }
       },
-      "Xamarin.UITest/2.2.4": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -96,10 +96,10 @@
         "nunit.nuspec"
       ]
     },
-    "Xamarin.UITest/2.2.4": {
-      "sha512": "Nv5w9uSJ4eC1ivXG2ilI/zMDwYBOigrigMWURexUqxCSmTs0nRNUosPbYeSw4ujX0lsFJ43w4cJ/ZW4FyVoK4A==",
+    "Xamarin.UITest/2.2.7": {
+      "sha512": "qlSeDT8ajDMfozooceuIGpnkIO1e/8jMfIX1NmBqnWh5d1fOkMafpeq9HYVxPO6f3VntDlx5/Zar9TBFqeF1lQ==",
       "type": "package",
-      "path": "xamarin.uitest/2.2.4",
+      "path": "xamarin.uitest/2.2.7",
       "files": [
         ".signature.p7s",
         "ThirdPartyNotices.txt",
@@ -110,7 +110,7 @@
         "lib/portable-net45+win8+wp8/Xamarin.UITest.xml",
         "lib/tools/test-cloud.exe",
         "tools/test-cloud.exe",
-        "xamarin.uitest.2.2.4.nupkg.sha512",
+        "xamarin.uitest.2.2.7.nupkg.sha512",
         "xamarin.uitest.nuspec"
       ]
     }
@@ -118,7 +118,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
       "NUnit >= 2.6.4",
-      "Xamarin.UITest >= 2.2.4"
+      "Xamarin.UITest >= 2.2.7"
     ]
   },
   "packageFolders": {
@@ -131,8 +131,9 @@
       "projectName": "MVVMArchitecture.UITests",
       "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/MVVMArchitecture.UITests.csproj",
       "packagesPath": "/Users/nidhi/.nuget/packages/",
-      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/obj",
+      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.UITests/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/nidhi/.config/NuGet/NuGet.Config"
       ],
@@ -157,7 +158,7 @@
           },
           "Xamarin.UITest": {
             "target": "Package",
-            "version": "[2.2.4, )"
+            "version": "[2.2.7, )"
           }
         }
       }

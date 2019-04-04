@@ -14,7 +14,7 @@ namespace MVVMArchitecture.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/SignUpPage.xaml")]
-    public partial class SignUpPage : global::Xamarin.Forms.ContentPage {
+    public partial class SignUpPage : global::MVVMArchitecture.Views.BasePage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {

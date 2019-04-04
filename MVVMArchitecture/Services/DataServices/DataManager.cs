@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MVVMArchitecture.Models.DatabaseEntities;
 using MVVMArchitecture.Services.Helpers;
 using MVVMArchitecture.Utils;
+using Xamarin.Forms;
 
 namespace MVVMArchitecture.Services.DataServices
 {
@@ -12,7 +13,7 @@ namespace MVVMArchitecture.Services.DataServices
         static readonly object instanceLock = new object();
         static DataManager instance;
         Database db;
-        BaseRepository<User> userRepo;
+        static BaseRepository<User> userRepo;
         #endregion
 
         #region Properties
@@ -87,9 +88,12 @@ namespace MVVMArchitecture.Services.DataServices
             }
             catch (Exception ex)
             {
-                await DialogService?.ShowError(ex, AuthenticationAlerts.SignUpFailed, CommonStrings.Ok, null);
-            }
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await DialogService?.ShowError(ex, AuthenticationAlerts.SignUpFailed, CommonStrings.Ok, null);
+                });
 
+            }
             return id > 0;
         }
 

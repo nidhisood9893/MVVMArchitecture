@@ -1934,8 +1934,9 @@
       "projectName": "MVVMArchitecture.Android",
       "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/MVVMArchitecture.Android.csproj",
       "packagesPath": "/Users/nidhi/.nuget/packages/",
-      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/obj",
+      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Android/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/nidhi/.config/NuGet/NuGet.Config"
       ],

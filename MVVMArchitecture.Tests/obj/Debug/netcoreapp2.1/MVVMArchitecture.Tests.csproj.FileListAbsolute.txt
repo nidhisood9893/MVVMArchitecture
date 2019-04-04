@@ -1,0 +1,17 @@
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.Tests.deps.json
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.Tests.runtimeconfig.json
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.Tests.runtimeconfig.dev.json
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.Tests.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.Tests.pdb
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/bin/Debug/netcoreapp2.1/MVVMArchitecture.pdb
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.csprojAssemblyReference.cache
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.csproj.CoreCompileInputs.cache
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.AssemblyInfoInputs.cache
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.AssemblyInfo.cs
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.csproj.CopyComplete
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.dll
+/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.Tests/obj/Debug/netcoreapp2.1/MVVMArchitecture.Tests.pdb

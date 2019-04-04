@@ -3,13 +3,13 @@ using FluentValidation.Internal;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using MVVMArchitecture.Models.DatabaseEntities;
-using MVVMArchitecture.Services.DataServices;
 using MVVMArchitecture.Utils;
 using MVVMArchitecture.Validations;
 using MVVMArchitecture.Views;
 using Xamarin.Forms;
+using MVVMArchitecture.Services.Helpers;
 
-
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("MVVMArchitecture.Tests")]
 namespace MVVMArchitecture.ViewModels
 {
     public class SignUpViewModel : ViewModelBase
@@ -19,7 +19,7 @@ namespace MVVMArchitecture.ViewModels
         /// </summary>
         /// <param name="navigation">Navigation. </param>
         /// <param name="dialog">Dialog .</param>
-        public SignUpViewModel(INavigationService navigation, IDialogService dialog) : base(navigation, dialog)
+        public SignUpViewModel(INavigationService navigation, IDialogService dialog, IRestService service) : base(navigation, dialog, service)
         {
             Title = PageTitles.SignupTitle;
             Validator = new UserValidator();
@@ -32,7 +32,11 @@ namespace MVVMArchitecture.ViewModels
         public User User
         {
             get => user;
-            set { SetProperty(ref user, value); }
+            set
+            {
+                SetProperty(ref user, value);
+                ValidationContext = new ValidationContext<User>(User, new PropertyChain(), new RulesetValidatorSelector("*"));
+            }
         }
 
         RelayCommand registerCommand;
@@ -63,26 +67,40 @@ namespace MVVMArchitecture.ViewModels
                 ///TODO 
                 /// web api code to register new user
 
-                var isRegistered = await System.Threading.Tasks.Task.Run(async () => await DataManager.Instance.RegisterUser(User));
-                if (isRegistered)
+                //var isRegistered = await System.Threading.Tasks.Task.Run(async () => await DataManager.Instance.RegisterUser(User));
+                //if (isRegistered)
+                var isRegistered = await Register().ConfigureAwait(false);
+                Device.BeginInvokeOnMainThread(async () =>
                 {
-                    var navPage = new NavigationPage(new LoginPage())
+                    if (isRegistered)
                     {
-                        BarBackgroundColor = (Color)Application.Current.Resources["AppThemeColor"],
-                        BarTextColor = Color.White
-                    };
-                    App.ConfigureMainPage(navPage);
-                }
-                else
-                {
-                    await DialogService.ShowMessage(AuthenticationAlerts.SignUpFailed, CommonStrings.AppName);
-                }
+                        var navPage = new NavigationPage(new LoginPage())
+                        {
+                            BarBackgroundColor = (Color)Application.Current.Resources["AppThemeColor"],
+                            BarTextColor = Color.White
+                        };
+                        App.ConfigureMainPage(navPage);
+                    }
+                    else
+                    {
+                        await DialogService.ShowMessage(AuthenticationAlerts.SignUpFailed, CommonStrings.AppName).ConfigureAwait(false);
+                    }
+                });
             }
             else
-                await DialogService.ShowMessage(validationResults.Errors[0].ErrorMessage, AuthenticationAlerts.SignUpFailed);
+                await DialogService.ShowMessage(validationResults.Errors[0].ErrorMessage, AuthenticationAlerts.SignUpFailed).ConfigureAwait(false);
 
-            IsBusy = false;
-            RegisterCommand.RaiseCanExecuteChanged();
+            Device.BeginInvokeOnMainThread(() =>
+                    {
+                        IsBusy = false;
+                        RegisterCommand.RaiseCanExecuteChanged();
+                    });
+        }
+
+        internal async System.Threading.Tasks.Task<bool> Register()
+        {
+            var isRegistered = await System.Threading.Tasks.Task.Run(async () => await RestService.RegisterUser(User).ConfigureAwait(false)).ConfigureAwait(false);
+            return isRegistered;
         }
 
         void SkipToLogin()

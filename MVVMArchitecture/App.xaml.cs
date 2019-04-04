@@ -8,6 +8,7 @@ using MVVMArchitecture.ViewModels;
 using MVVMArchitecture.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MVVMArchitecture.Services.DataServices;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -20,7 +21,14 @@ namespace MVVMArchitecture
         static NavigationService navigationService;
         static DialogService dialogService;
 
-        public static ViewModelLocator Locator { get => locator ?? (locator = new ViewModelLocator()); }
+        public static ViewModelLocator Locator
+        {
+            get => locator ?? (locator = new ViewModelLocator());
+            set
+            {
+                locator = value;
+            }
+        }
 
         static ViewModelLocator locator;
 
@@ -95,7 +103,11 @@ namespace MVVMArchitecture
             SimpleIoc.Default.Register<INavigationService>(() => NavigationService);
             SimpleIoc.Default.Register<IRestServiceError, ViewModelBase>();
             SimpleIoc.Default.Register<ServiceManager>();
-            SimpleIoc.Default.Register<RestService>();
+
+            if (CommonUtils.Instance.IsConnected)
+                SimpleIoc.Default.Register<IRestService, RestService>();
+            else
+                SimpleIoc.Default.Register<IRestService, DataManager>();
         }
         #endregion
 

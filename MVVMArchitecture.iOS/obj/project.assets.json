@@ -336,6 +336,15 @@
           "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        }
+      },
       "MVVMArchitecture/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -693,6 +702,15 @@
         },
         "runtime": {
           "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        }
+      },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
         }
       },
       "MVVMArchitecture/1.0.0": {
@@ -1054,6 +1072,15 @@
           "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
         }
       },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        }
+      },
       "MVVMArchitecture/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1411,6 +1438,15 @@
         },
         "runtime": {
           "lib/XamariniOS10/Xamarin.SimplePing.iOS.dll": {}
+        }
+      },
+      "Xamarin.TestCloud.Agent/0.21.7": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/Calabash.dll": {}
         }
       },
       "MVVMArchitecture/1.0.0": {
@@ -2368,6 +2404,19 @@
         "xamarin.simpleping.nuspec"
       ]
     },
+    "Xamarin.TestCloud.Agent/0.21.7": {
+      "sha512": "mubMu3vnMkY62KQ3u6dKLFBGHlf2iKt1qU+N7ptAqi+rKpC+Zcy4W1sH0HQdP6YtXuhAkQt1u8LHJMGOd2qkYA==",
+      "type": "package",
+      "path": "xamarin.testcloud.agent/0.21.7",
+      "files": [
+        ".signature.p7s",
+        "LICENSE",
+        "epl-v10.html",
+        "lib/Xamarin.iOS/Calabash.dll",
+        "xamarin.testcloud.agent.0.21.7.nupkg.sha512",
+        "xamarin.testcloud.agent.nuspec"
+      ]
+    },
     "MVVMArchitecture/1.0.0": {
       "type": "project",
       "path": "../MVVMArchitecture/MVVMArchitecture.csproj",
@@ -2379,7 +2428,8 @@
       "MVVMArchitecture >= 1.0.0",
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.6.3",
       "Microsoft.CodeQuality.Analyzers >= 2.6.3",
-      "Xamarin.Forms >= 3.5.0.169047"
+      "Xamarin.Forms >= 3.5.0.169047",
+      "Xamarin.TestCloud.Agent >= 0.21.7"
     ]
   },
   "packageFolders": {
@@ -2392,8 +2442,9 @@
       "projectName": "MVVMArchitecture.iOS",
       "projectPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.iOS/MVVMArchitecture.iOS.csproj",
       "packagesPath": "/Users/nidhi/.nuget/packages/",
-      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.iOS/obj",
+      "outputPath": "/Users/nidhi/Documents/Xamarin Workspace/Practice/MVVM/MVVMArchitecture/MVVMArchitecture.iOS/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/nidhi/.config/NuGet/NuGet.Config"
       ],
@@ -2427,6 +2478,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[3.5.0.169047, )"
+          },
+          "Xamarin.TestCloud.Agent": {
+            "target": "Package",
+            "version": "[0.21.7, )"
           }
         }
       }

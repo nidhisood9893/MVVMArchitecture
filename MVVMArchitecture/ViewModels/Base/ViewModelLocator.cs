@@ -1,6 +1,7 @@
 ﻿using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
 using MVVMArchitecture.Services.RestServices;
+using MVVMArchitecture.Services.Helpers;
 
 namespace MVVMArchitecture.ViewModels
 {
@@ -33,6 +34,9 @@ namespace MVVMArchitecture.ViewModels
         public ServiceManager ServiceManager { get => ServiceLocator.Current.GetInstance<ServiceManager>(); }
 
         public RestService RestService { get => ServiceLocator.Current.GetInstance<RestService>(); }
+
+        public IRestServiceError RestServiceError { get => ServiceLocator.Current.GetInstance<IRestServiceError>(); }
+
         #endregion
 
         public static void CleanUp()

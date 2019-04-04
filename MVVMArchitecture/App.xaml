@@ -35,11 +35,10 @@
             <!--Colors-->
             <Color x:Key="AppThemeColor">Teal</Color>
             <!-- global styles-->
-          
             <!--layout styles-->
             <Style x:Key="ScrollViewStyle" TargetType="ScrollView">
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" /> 
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
             <Style x:Key="StacklayoutStyle" TargetType="StackLayout">
                 <Setter Property="VerticalOptions" Value="FillAndExpand" />
@@ -47,7 +46,6 @@
                 <Setter Property="Margin" Value="20" />
                 <Setter Property="Spacing" Value="20" />
             </Style>
-           
             <!--button style-->
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="VerticalOptions" Value="End" />
@@ -56,13 +54,11 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="Margin" Value="20" />
             </Style>
-            
             <!--entry style-->
             <Style x:Key="EntryStyle" TargetType="Entry">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="TextColor" Value="Gray" />
             </Style>
-            
             <!--label style-->
             <Style x:Key="LabelStyle" TargetType="Label">
                 <Setter Property="VerticalOptions" Value="Center" />

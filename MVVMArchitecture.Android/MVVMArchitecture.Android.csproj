@@ -28,7 +28,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-<RunCodeAnalysis>true</RunCodeAnalysis><AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+<AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
 <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
 <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-<RunCodeAnalysis>true</RunCodeAnalysis>  </PropertyGroup>
+</PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
